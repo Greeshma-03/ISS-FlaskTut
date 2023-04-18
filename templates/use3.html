@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    Random Title
+</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">  Link to the CSS file
+</head>
+<body>
+    <h1>some text to demo python usage</h1>
+
+    <h2>Fruits</h2>
+    <ul>
+        {% for fruit in sendvar %}
+         <li>{{fruit}}</li>
+         {%endfor%}         
+    </ul>
+
+    <h2 style="background-color: aqua;">if else demo</h2>
+
+    <h3>is myfruit in the list?</h3>
+
+    {% if myfruit in sendvar %}
+    <p>Yes, {{myfruit}} is present</p>
+
+    {% else %}
+    <p>Oops, {{myfruit}} is not in the list</p>
+    {% endif %}
+    <script src="../static/script1.js"></script>
+    
+</body>
+</html> 
